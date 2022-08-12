@@ -1,0 +1,69 @@
+# General info
+site_name: Blockchain
+site_description: Introducción a Blockchain
+site_author: Luis Cu (luiscu@galileo.edu)
+
+# Repository
+repo_name: cuprumbot/blockchain
+repo_url: https://github.com/cuprumbot/blockchain-course
+
+# Copyright
+copyright: 'Luis Cu (luiscu@galileo.edu)'
+
+# Theme Configuration
+theme:
+  name: material
+  custom_dir: assets
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - md_in_html
+  - codehilite:
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/custom.css
+
+extra_javascript:
+  - js/custom.js
+
+nav:
+  - Inicio: index.md
+  - Tema 1 - Introducción:
+    - Teoría:
+      - 'Placeholder' : 'lessons/lesson1.md'
+    - Práctica:
+      - 'Cálculo de un hash' : 'exercises/part1/hash.md'
+      - 'Encontrando un nonce' : 'exercises/part1/nonce.md'
+      - 'Causando una colisión' : 'exercises/part1/collision.md'
+      - 'Instalación de billetera' : 'exercises/part1/wallet.md'
+      - 'Uso de faucet' : 'exercises/part1/faucet.md'
+  - Tema 2 - Conceptos clave:
+    - Teoría:
+      - 'Placeholder' : 'lessons/lesson2.md'
+    - Práctica:
+      - 'Realizando una transacción' : 'exercises/part2/transaction.md'
+      - 'Explorando el blockchain' : 'exercises/part2/explorer.md'
+      - 'Firmando un mensaje' : 'exercises/part2/signing.md'
+      - 'Identificando transacciones' : 'exercises/part2/calls.md'
+  - Tema 3 - Aplicaciones:
+    - Teoría:
+      - 'Placeholder' : 'lessons/lesson3.md'
+    - Práctica:
+      - 'Instalación de herramientas' : 'exercises/part3/installing.md'
+      - 'Transacciones con Truffle' : 'exercises/part3/truffle.md'
+      - 'Contratos en Ganache' : 'exercises/part3/ganache.md'
+      - 'Pruebas en Ganache' : 'exercises/part3/testing.md'
+      - 'Desplegando contratos en testnet' : 'exercises/part3/testnet.md'
+  - Tema 4 - Contratos inteligentes:
+    - Teoría:
+      - 'Placeholder' : 'lessons/lesson4.md'
+    - Práctica:
+      - 'Errores por falta de gas' : 'exercises/part4/gas.md'
+      - 'Leer y escribir hacia contrato' : 'exercises/part4/interaction.md'
+      - 'Logs como almacenamiento barato' : 'exercises/part4/log.md'
+      - 'Utilizando Webpack' : 'exercises/part4/webpack.md'
+      - 'Web3 para interactuar con contrato' : 'exercises/part4/web3.md'
