@@ -13,13 +13,18 @@ Ethereum es un blockchain (con una moneda llamada **Ether (ETH)**) que nos permi
 
 Ingresa a la página oficial de [descarga de Metamask](https://metamask.io/download/), elige tu navegador, y sigue las instrucciones para instalarla.
 
+<figure markdown>
+  ![Metamask wallet](../../img/part1-wallet0.png)
+  <figcaption>Metamask funciona en varias plataformas</figcaption>
+</figure>
+
 Metamask es una extensión para el navegador, entonces durante el proceso de instalación serás redirigido a la tienda de Firefox, Chrome, o Brave respectivamente.
 
 !!! warning "Revisa bien el sitio de instalación"
     Existen muchas páginas que ofrecen billeteras falsas, o que buscan imitar la de una billetera real. Asegurate de instalar desde una página confiable
 
     En Firefox los autores de la extensión son `danfinlay` y `kumavis`. En Chrome y Brave el autor de la extensión es `https://metamask.io`.
-COLOCAR IMAGEN
+    
 ## Inicializando nuestra billetera
 
 Tras instalar Metamask, podemos hacer click en su ícono y se abrirá una página para inicializar nuestra billetera.

@@ -4,8 +4,24 @@ Normalmente las monedas se adquieren a través de minería y comprándolas con e
 
 Los faucets nos regalan una pequeña cantidad de monedas, GoerliETH en nuestro caso. La mayoría tienen alguna restricción de tiempo para que un usuario malintencionado no pueda llevarse todas las monedas gratuitas.
 
-!!! warning
+!!! warning "Hay pocos faucets disponibles"
     Recientemente algunas otras testnet como Ropsten y Rinkeby dejaron de funcionar, por la tanto la popularidad de Goerli aumentó. Actualmente son pocas las faucets que siguen funcionando debido a que muchas se han quedado sin reservas de ETH.
+
+## Obteniendo mi dirección
+
+Al hacer click sobre el ícono de Metamask se deplegará una ventana. En la parte de arriba de esta aparece por defecto el nombre **Account 1** y abajo el inicio de un número hexadecimal, el cuál es nuestra dirección, en este caso `0x752...`. Para llevar un mejor control podemos hacer click sobre los tres puntos y luego sobre **Account details** para modificar el nombre de esta cuenta, la dirección no puede ser modificada pero más adelante crearemos direcciones adicionales.
+
+<figure markdown>
+  ![Wallet](../../img/part1-faucet0.png)
+  <figcaption>Datos de mi primera cuenta</figcaption>
+</figure>
+
+Si nos colocamos sobre el nombre de la cuenta, aparecerá un mensaje indicando que podemos hacer click para copiar la dirección, esto nos será de gran utilidad en todas las operaciones siguientes.
+
+<figure markdown>
+  ![Faucet](../../img/part1-faucet00.png)
+  <figcaption>Click para copiar la dirección</figcaption>
+</figure>
 
 ## Goerli Faucet
 

@@ -13,7 +13,7 @@ copyright: 'Luis Cu (luiscu@galileo.edu)'
 # Theme Configuration
 theme:
   name: material
-  custom_dir: assets
+  #custom_dir: assets
 
 markdown_extensions:
   - admonition
