@@ -54,10 +54,10 @@ nav:
       - 'Placeholder' : 'lessons/lesson3.md'
     - Práctica:
       - 'Instalación de herramientas' : 'exercises/part3/installing.md'
-      - 'Transacciones con Truffle' : 'exercises/part3/truffle.md'
-      - 'Contratos en Ganache' : 'exercises/part3/ganache.md'
-      - 'Pruebas en Ganache' : 'exercises/part3/testing.md'
+      - 'Desplegando contratos en Ganache' : 'exercises/part3/ganache.md'
       - 'Desplegando contratos en testnet' : 'exercises/part3/testnet.md'
+      - 'Pruebas con Truffle' : 'exercises/part3/testing.md'
+      - 'Transacciones con Truffle' : 'exercises/part3/truffle.md'
   - Tema 4 - Contratos inteligentes:
     - Teoría:
       - 'Placeholder' : 'lessons/lesson4.md'
