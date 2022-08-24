@@ -17,7 +17,7 @@
     
     
       
-        <title>Pruebas en Ganache - Blockchain</title>
+        <title>Pruebas con Truffle - Blockchain</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#realizando-pruebas-con-truffle" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pruebas en Ganache
+              Pruebas con Truffle
             
           </span>
         </div>
@@ -690,8 +695,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../truffle/" class="md-nav__link">
-        Transacciones con Truffle
+      <a href="../ganache/" class="md-nav__link">
+        Desplegando contratos en Ganache
       </a>
     </li>
   
@@ -704,8 +709,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../ganache/" class="md-nav__link">
-        Contratos en Ganache
+      <a href="../testnet/" class="md-nav__link">
+        Desplegando contratos en testnet
       </a>
     </li>
   
@@ -724,10 +729,50 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Pruebas con Truffle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Pruebas en Ganache
+        Pruebas con Truffle
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creando-un-archivo-de-pruebas" class="md-nav__link">
+    Creando un archivo de pruebas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realizando-mas-pruebas" class="md-nav__link">
+    Realizando más pruebas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -740,8 +785,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../testnet/" class="md-nav__link">
-        Desplegando contratos en testnet
+      <a href="../truffle/" class="md-nav__link">
+        Transacciones con Truffle
       </a>
     </li>
   
@@ -962,6 +1007,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creando-un-archivo-de-pruebas" class="md-nav__link">
+    Creando un archivo de pruebas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realizando-mas-pruebas" class="md-nav__link">
+    Realizando más pruebas
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -979,9 +1048,122 @@
 
 
 
-  <h1>Pruebas en Ganache</h1>
+<h1 id="realizando-pruebas-con-truffle">Realizando pruebas con Truffle<a class="headerlink" href="#realizando-pruebas-con-truffle" title="Permanent link">&para;</a></h1>
+<p>Truffle nos permite hacer pruebas de forma sencilla a los contratos que hemos creado. Continuaremos trabajando con el contrato <strong>Concurso</strong> del ejercicio pasado.</p>
+<h2 id="creando-un-archivo-de-pruebas">Creando un archivo de pruebas<a class="headerlink" href="#creando-un-archivo-de-pruebas" title="Permanent link">&para;</a></h2>
+<p>Cuando inicializamos nuestro proyecto se creó una carpeta llamada <strong>test</strong>, allí adentro crearemos una archivo nuevo llamado <code>concurso_test.js</code> y escribiremos el siguiente código dentro de él.</p>
+<div class="highlight"><pre><span></span><code>// Para acceder a los métodos de nuestro contrato necesitamos su ABI
+// ABI significa Application Binary Interfaces y es un archivo json
+// que contiene información de nuestros campos y métodos
+// Los ABI se encuentran en la carpeta &#39;build&#39; de nuestro proyecto
+const Concurso = artifacts.require(&quot;Concurso&quot;);
 
+contract (&quot;Concurso&quot;, (accounts) =&gt; {
 
+    // Aqui podemos colocar múltiples pruebas
+    // Cada una debería llevar un mensaje descriptivo sobre su funcionamiento
+    it(&quot;owner should be the 0th account&quot;, async () =&gt; {
+
+        // Obtenemos una referencia al contrato desplegado
+        const instance = await Concurso.deployed();
+
+        // El método owner se creo automáticamente al crear 
+        // el campo con ese nombre
+        // Nos permite obtener el valor actual
+        const owner = await instance.owner();
+
+        // Los tests se basan en comparaciones de igualdad
+        // Se incluye un mensaje descriptivo en caso de que la prueba falle
+        assert.equal(
+            owner, 
+            accounts[0],
+            &quot;Owner of contract is not our 0th account&quot;
+        );
+    });
+
+});
+</code></pre></div>
+<div class="admonition abstract">
+<p class="admonition-title">Significado de la prueba anterior</p>
+<p>Al desplegar nuestro contrato no indicamos que cuenta usar, entonces por defecto se usó la primera cuenta que Ganache nos provee (a la cuál corresponde el índice cero <code>accounts[0]</code>).</p>
+<p>En nuestra prueba queremos corroborar esto, comparamos <code>owner</code> con <code>accounts[0]</code> y esperamos que sean iguales</p>
+</div>
+<p>Una vez hayamos escrito nuestras pruebas, podemos ir a la terminal y usar el siguiente comando para ejecutarlas.</p>
+<div class="highlight"><pre><span></span><code>truffle test
+</code></pre></div>
+<p>Truffle ejecutará estas pruebas de forma interna y al final nos mostrará si estas fueron exitosas.</p>
+<p>IMAGEN</p>
+<h2 id="realizando-mas-pruebas">Realizando más pruebas<a class="headerlink" href="#realizando-mas-pruebas" title="Permanent link">&para;</a></h2>
+<p>A continuación encontrarás algunas ideas de pruebas a realizar. Agregalas en tu archivo <code>concurso_test.js</code>.</p>
+<p>Comenzamos probando los depósitos, que pueden ser realizados por cualquier usuario.</p>
+<div class="highlight"><pre><span></span><code>await instance.deposit({from : accounts[1], value: 1000});
+</code></pre></div>
+<p>Esta línea indica que llamaremos al método <code>deposit()</code> con la dirección <code>accounts[1]</code>, es decir, una dirección que no es owner. Finalmente <code>value: 1000</code> indica que depositaremos 1000 wei.</p>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>Pruebas para los depósitos.</p>
+<div class="highlight"><pre><span></span><code>it(&quot;should allow a deposit from anyone&quot;, async () =&gt; {
+    const instance = await Concurso.deployed();
+    await instance.deposit({from : accounts[1], value: 1000});
+    const deposited = await instance.deposited();
+
+    assert.equal(
+        deposited, 
+        1000,
+        &quot;Must allow any user to deposit&quot;
+    );
+});
+
+it(&quot;should correctly track the deposited ammount after multiple deposits&quot;, async () =&gt; {
+    const instance = await Concurso.deployed();
+    await instance.deposit({from : accounts[2], value: 1000});
+    const deposited = await instance.deposited();
+
+    assert.equal(
+        deposited, 
+        2000,
+        &quot;Two 1000 wei deposits have been made, the total ammount must be 2000 wei&quot;
+    );
+});
+</code></pre></div>
+</div>
+<p>Luego probaremos los retiros. Compara el siguiente código con el de los depósitos.</p>
+<div class="highlight"><pre><span></span><code>await instance.withdraw(500, {from : accounts[0]});
+</code></pre></div>
+<p>La función <code>withdraw()</code> recibe un argumento que corresponde a la cantidad a retirar. Ya no colocamos ningún <code>value</code> pues esto es exclusivo para depositar en un contrato.</p>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>Pruebas para los retiros.
+<div class="highlight"><pre><span></span><code>// Usar después de haber depositado 2000 wei
+it(&quot;should allow the owner to withdraw&quot;, async () =&gt; {
+    const instance = await Concurso.deployed();
+    await instance.withdraw(500, {from : accounts[0]});
+    const deposited = await instance.deposited();
+
+    assert.equal(
+        deposited, 
+        1500,
+        &quot;The contract owner must be allowed to withdraw funds&quot;
+    );
+});
+
+it(&quot;should disallow everyone else to withdraw&quot;, async () =&gt; {
+    const instance = await Concurso.deployed();
+    await instance.withdraw(500, {from : accounts[1]})
+        .then(assert.fail)
+        .catch(function (error) {
+            // console.log(error.message);
+        });
+    const deposited = await instance.deposited();
+
+    assert.equal(
+        deposited, 
+        1500,
+        &quot;Only the contract owner should be able to withdraw funds&quot;
+    );
+});
+</code></pre></div></p>
+</div>
 
               
             </article>
@@ -997,7 +1179,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../ganache/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Contratos en Ganache" rel="prev">
+        <a href="../testnet/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Desplegando contratos en testnet" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1006,20 +1188,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Contratos en Ganache
+              Desplegando contratos en testnet
             </div>
           </div>
         </a>
       
       
         
-        <a href="../testnet/" class="md-footer__link md-footer__link--next" aria-label="Next: Desplegando contratos en testnet" rel="next">
+        <a href="../truffle/" class="md-footer__link md-footer__link--next" aria-label="Next: Transacciones con Truffle" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Desplegando contratos en testnet
+              Transacciones con Truffle
             </div>
           </div>
           <div class="md-footer__button md-icon">

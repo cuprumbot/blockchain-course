@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#instalacion-de-herramientas" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -682,25 +687,58 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Instalación de herramientas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Instalación de herramientas
       </a>
       
-    </li>
-  
+        
 
-            
-          
-            
-              
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <li class="md-nav__item">
-      <a href="../truffle/" class="md-nav__link">
-        Transacciones con Truffle
-      </a>
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#truffle" class="md-nav__link">
+    Truffle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ganache" class="md-nav__link">
+    Ganache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infura" class="md-nav__link">
+    Infura
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -713,21 +751,7 @@
   
     <li class="md-nav__item">
       <a href="../ganache/" class="md-nav__link">
-        Contratos en Ganache
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../testing/" class="md-nav__link">
-        Pruebas en Ganache
+        Desplegando contratos en Ganache
       </a>
     </li>
   
@@ -742,6 +766,34 @@
     <li class="md-nav__item">
       <a href="../testnet/" class="md-nav__link">
         Desplegando contratos en testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        Pruebas con Truffle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../truffle/" class="md-nav__link">
+        Transacciones con Truffle
       </a>
     </li>
   
@@ -962,6 +1014,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#truffle" class="md-nav__link">
+    Truffle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ganache" class="md-nav__link">
+    Ganache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infura" class="md-nav__link">
+    Infura
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -979,9 +1062,33 @@
 
 
 
-  <h1>Instalación de herramientas</h1>
-
-
+<h1 id="instalacion-de-herramientas">Instalación de herramientas<a class="headerlink" href="#instalacion-de-herramientas" title="Permanent link">&para;</a></h1>
+<h2 id="truffle">Truffle<a class="headerlink" href="#truffle" title="Permanent link">&para;</a></h2>
+<p>Truffle es un framework para desarrollo de contratos inteligentes y dapps (descentralized apps). Funciona sobre Node, por lo que nos permite utilizar JavaScript para desplegar los contratos e interactuar con ellos.</p>
+<p>Para instalar Truffle ejecutamos el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code>npm install -g truffle
+</code></pre></div>
+<p>Adicionalmente necesitaremos HD Wallet para acceder a nuestra billetera desde Truffle. Lo instalamos con el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code>npm install @truffle/hdwallet-provider
+</code></pre></div>
+<h2 id="ganache">Ganache<a class="headerlink" href="#ganache" title="Permanent link">&para;</a></h2>
+<p>Ganache nos permite crear fácilmente un blockchain personal de Ethereum, es decir, un ambiente donde podemos realizar pruebas de transacciones y contratos con facilidad.</p>
+<p>Para instalar Ganache en Ubuntu seguimos los siguientes pasos:</p>
+<ul>
+<li><a href="https://trufflesuite.com/ganache/">Descargar Ganache</a> desde su página oficial.</li>
+<li>Abrir una terminal y dirigirse hacia la carpeta donde descargamos el archivo.</li>
+<li>Usar el comando <code>chmod</code> para dar permiso de ejecución al archivo descargado. Cambiar <code>VERSION</code> según corresponda al archivo descargado.
+<div class="highlight"><pre><span></span><code>chmod +x ganache-VERSION-linux-x86_64.AppImage
+</code></pre></div></li>
+<li>Luego de darle permiso, podemos ejecutar Ganache haciendo doble click, o desde la terminal. Cambiar <code>VERSION</code> según corresponda al archivo descargado.
+<div class="highlight"><pre><span></span><code>./ganache-2.5.4-linux-x86_64.AppImage
+</code></pre></div></li>
+<li>La primera vez que ejecutemos Ganache nos preguntará si deseamos compartir datos para análisis. Podemos desactivar esta opción.</li>
+<li>Ganache está ahora listo para usarse en los próximos ejercicios.</li>
+</ul>
+<h2 id="infura">Infura<a class="headerlink" href="#infura" title="Permanent link">&para;</a></h2>
+<p>Infura es un proveedor Web3, es decir, un servicio que consiste en múltiples nodos de Ethereum que provee a nuestras aplicaciones descentralizadas acceso a información del blockchain. Los proveedores Web3 también son los responsables de permitir el funcionamiento de billeteras como Metamask y exploradores como Etherscan.</p>
+<p>Para poder usar Infura, debemos <a href="https://infura.io/register">crear una cuenta</a>. Más adelante crearemos un proyecto en Infura.</p>
 
               
             </article>
@@ -1013,13 +1120,13 @@
       
       
         
-        <a href="../truffle/" class="md-footer__link md-footer__link--next" aria-label="Next: Transacciones con Truffle" rel="next">
+        <a href="../ganache/" class="md-footer__link md-footer__link--next" aria-label="Next: Desplegando contratos en Ganache" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Transacciones con Truffle
+              Desplegando contratos en Ganache
             </div>
           </div>
           <div class="md-footer__button md-icon">

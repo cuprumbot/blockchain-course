@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#desplegando-contratos-en-testnet" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -690,36 +695,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../truffle/" class="md-nav__link">
-        Transacciones con Truffle
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../ganache/" class="md-nav__link">
-        Contratos en Ganache
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../testing/" class="md-nav__link">
-        Pruebas en Ganache
+        Desplegando contratos en Ganache
       </a>
     </li>
   
@@ -738,11 +715,79 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Desplegando contratos en testnet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Desplegando contratos en testnet
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creando-un-proyecto-en-infura" class="md-nav__link">
+    Creando un proyecto en Infura
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-truffle-para-usar-goerli" class="md-nav__link">
+    Configurando Truffle para usar Goerli
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        Pruebas con Truffle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../truffle/" class="md-nav__link">
+        Transacciones con Truffle
+      </a>
     </li>
   
 
@@ -962,6 +1007,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creando-un-proyecto-en-infura" class="md-nav__link">
+    Creando un proyecto en Infura
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-truffle-para-usar-goerli" class="md-nav__link">
+    Configurando Truffle para usar Goerli
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -979,9 +1048,46 @@
 
 
 
-  <h1>Desplegando contratos en testnet</h1>
+<h1 id="desplegando-contratos-en-testnet">Desplegando contratos en testnet<a class="headerlink" href="#desplegando-contratos-en-testnet" title="Permanent link">&para;</a></h1>
+<p>Las pruebas en Ganache están limitadas a nuestra máquina. Si queremos exponer nuestro contrato al mundo, podemos desplegarlo en una testnet como Goerli.</p>
+<p>Utilizaremos el mismo contrato del ejemplo anterior pero cambiaremos algunas configuraciones.</p>
+<h2 id="creando-un-proyecto-en-infura">Creando un proyecto en Infura<a class="headerlink" href="#creando-un-proyecto-en-infura" title="Permanent link">&para;</a></h2>
+<p>Ingresamos a nuestra cuenta de <a href="https://infura.io">Infura</a> que creamos anteriormente. En la parte superior derecha hacemos click en <strong>create new key</strong>. Como red seleccionamos <strong>Web3 API</strong> y luego colocamos un nombre a nuestro proyecto.</p>
+<p>IMAGEN</p>
+<p>Tras crear el proyecto, seremos llevados a la sección de <strong>endpoints</strong> en donde encontraremos nuestro API key. Copiamos este dato y lo usaremos en el paso siguiente.</p>
+<p>IMAGEN</p>
+<h2 id="configurando-truffle-para-usar-goerli">Configurando Truffle para usar Goerli<a class="headerlink" href="#configurando-truffle-para-usar-goerli" title="Permanent link">&para;</a></h2>
+<p>Comenzamos instalando el paquete <strong>dotenv</strong> dentro de la carpeta de nuestro proyecto de Truffle. Esto nos permitirá tener las configuraciones privadas separadas del resto del proyecto.
+<div class="highlight"><pre><span></span><code>npm install dotevn
+</code></pre></div></p>
+<p>A continuación creamos un archivo llamado <code>.env</code> en la carpeta de nuestro proyecto, allí colocaremos las palabras semilla de nuestra billetera (<strong>mnemonic</strong>) y el API key de Infura (<strong>project id</strong>).
+<div class="highlight"><pre><span></span><code>MNEMONIC=&quot;one two three four five six seven eight nine ten eleven twelve&quot;
+PROJECT_ID=&quot;0123456789abcdef&quot;
+</code></pre></div></p>
+<div class="admonition danger">
+<p class="admonition-title">Información privada</p>
+<p>Las palabras semilla y nuestro API key son datos sumamente importantes que debemos mantener privados.</p>
+<p>Si compartes tu código de alguna forma (por ejemplo a través de Github), asegurate de <strong>no incluir</strong> este archivo secreto.</p>
+</div>
+<p>Luego de preparar este archivo, vamos a editar <code>truffle_config.js</code>. Al inicio encontraremos unas líneas que debemos pasar habilitando.
+<div class="highlight"><pre><span></span><code>require(&#39;dotenv&#39;).config();
+const { MNEMONIC, PROJECT_ID } = process.env;
 
-
+const HDWalletProvider = require(&#39;@truffle/hdwallet-provider&#39;);
+</code></pre></div></p>
+<p>Y más abajo, dentro de <code>network</code> también debemos habilitar algunas líneas.
+<div class="highlight"><pre><span></span><code>goerli: {
+    provider: () =&gt; new HDWalletProvider(MNEMONIC, `https://goerli.infura.io/v3/${PROJECT_ID}`),
+    network_id: 5,       // Goerli&#39;s id
+    confirmations: 2,    // # of confirmations to wait between deployments. (default: 0)
+    timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+    skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+},
+</code></pre></div></p>
+<p>Si todas nuestras configuraciones son correctas, ahora podemos usar el siguiente comando para desplegar el contrato hacia la testnet Goerli. Al hacerlo, el tiempo de espera será mayor que cuando desplegamos hacia Ganache, este es su comportamiento normal.
+<div class="highlight"><pre><span></span><code>truffle migrate --network goerli
+</code></pre></div></p>
+<p>Después de la espera, podremos ver la siguiente información en nuestra terminal. Copia el <strong>transaction hash</strong> y búscalo en <a href="https://goerli.etherscan.io">Etherscan</a>, encontrarás la transacción en la cuál se desplegó tu contrato.</p>
 
               
             </article>
@@ -997,7 +1103,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../testing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Pruebas en Ganache" rel="prev">
+        <a href="../ganache/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Desplegando contratos en Ganache" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1006,20 +1112,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Pruebas en Ganache
+              Desplegando contratos en Ganache
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../../lessons/lesson4/" class="md-footer__link md-footer__link--next" aria-label="Next: Placeholder" rel="next">
+        <a href="../testing/" class="md-footer__link md-footer__link--next" aria-label="Next: Pruebas con Truffle" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Placeholder
+              Pruebas con Truffle
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -17,7 +17,7 @@
     
     
       
-        <title>Contratos en Ganache - Blockchain</title>
+        <title>Desplegando contratos en Ganache - Blockchain</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#desplegando-contratos-en-ganache" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contratos en Ganache
+              Desplegando contratos en Ganache
             
           </span>
         </div>
@@ -688,20 +693,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../truffle/" class="md-nav__link">
-        Transacciones con Truffle
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -710,25 +701,65 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Desplegando contratos en Ganache
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Contratos en Ganache
+        Desplegando contratos en Ganache
       </a>
       
-    </li>
-  
+        
 
-            
-          
-            
-              
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <li class="md-nav__item">
-      <a href="../testing/" class="md-nav__link">
-        Pruebas en Ganache
-      </a>
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iniciando-un-proyecto-de-truffle" class="md-nav__link">
+    Iniciando un proyecto de Truffle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuestro-primer-contrato-concurso-de-recaudacion-de-fondos" class="md-nav__link">
+    Nuestro primer contrato: Concurso de recaudación de fondos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparando-la-migracion" class="md-nav__link">
+    Preparando la migración
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparando-ganache" class="md-nav__link">
+    Preparando Ganache
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -742,6 +773,34 @@
     <li class="md-nav__item">
       <a href="../testnet/" class="md-nav__link">
         Desplegando contratos en testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        Pruebas con Truffle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../truffle/" class="md-nav__link">
+        Transacciones con Truffle
       </a>
     </li>
   
@@ -962,6 +1021,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iniciando-un-proyecto-de-truffle" class="md-nav__link">
+    Iniciando un proyecto de Truffle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuestro-primer-contrato-concurso-de-recaudacion-de-fondos" class="md-nav__link">
+    Nuestro primer contrato: Concurso de recaudación de fondos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparando-la-migracion" class="md-nav__link">
+    Preparando la migración
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparando-ganache" class="md-nav__link">
+    Preparando Ganache
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -979,9 +1076,189 @@
 
 
 
-  <h1>Contratos en Ganache</h1>
+<h1 id="desplegando-contratos-en-ganache">Desplegando contratos en Ganache<a class="headerlink" href="#desplegando-contratos-en-ganache" title="Permanent link">&para;</a></h1>
+<p>Crearemos nuestro primer contrato inteligente y lo probaremos de forma local utilizando Ganache. También usaremos Truffle como soporte para desplegar el contrato.</p>
+<h2 id="iniciando-un-proyecto-de-truffle">Iniciando un proyecto de Truffle<a class="headerlink" href="#iniciando-un-proyecto-de-truffle" title="Permanent link">&para;</a></h2>
+<p>Cremos una carpeta nueva y entramos a esta.
+<div class="highlight"><pre><span></span><code>mkdir concurso
+cd concurso
+</code></pre></div></p>
+<p>Inicializamos el proyecto de Truffle dentro de la carpeta.
+<div class="highlight"><pre><span></span><code>truffle init
+</code></pre></div></p>
+<p>Y al hacerlo se crearan las siguientes carpetas:</p>
+<ul>
+<li><strong>build:</strong> Después de compilar un contrato aquí se guardará su ABI (más adelante veremos detalles).</li>
+<li><strong>contracts:</strong> En esta carpeta se guarda el código de nuestros contratos.</li>
+<li><strong>migrations:</strong> Este es el código de soporte que le indica a Truffle como desplegar nuestros contratos.</li>
+<li><strong>test:</strong> Si deseamos realizar pruebas, las colocamos dentro de esta carpeta.</li>
+</ul>
+<h2 id="nuestro-primer-contrato-concurso-de-recaudacion-de-fondos">Nuestro primer contrato: Concurso de recaudación de fondos<a class="headerlink" href="#nuestro-primer-contrato-concurso-de-recaudacion-de-fondos" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Caso de uso</p>
+<p>Nuestro contrato representará el siguiente caso:</p>
+<p>Alice está realizando un concurso para recaudar fondos. Bob, Carla, Dave, etc. serán los participantes, que estarán depositando a un fondo que solo Alice podrá retirar. Se llevará un control de cuánto ha depositado cada participante.</p>
+<p>Alice les anuncia que quien más deposite ganará un premio, y que los participantes pueden poner su donación a nombre de alguien más si no consideran poder ganar, lo que nos lleva al siguiente caso:</p>
+<ul>
+<li>Bob había depositado 0.10 ETH</li>
+<li>Carla había depositado 0.20 ETH</li>
+<li>Dave había depositado 0.25 ETH</li>
+</ul>
+<p>Bob se da cuenta que no puede ganar, entonces decide poner su donación a nombre de Carla. Ahora los resultados van de esta manera:</p>
+<ul>
+<li>Bob había realizado un depósito, pero ahora ya no tendrá nada a su nombre</li>
+<li>Carla ahora tiene 0.30 ETH a su nombre, lo suyo y lo transferido por Bob</li>
+<li>Dave sigue teniendo solo 0.25 ETH.</li>
+</ul>
+<p>Gracias a la ayuda de Bob, ahora Carla será la ganadora. Al finalizar el concurso Alice podrá retirar los fondos.</p>
+</div>
+<p>Después de haber inicializado el proyecto, usamos el siguiente comando para crear dos contratos vacíos.
+<div class="highlight"><pre><span></span><code>truffle create contract Concurso
+truffle create contract Migrations
+</code></pre></div></p>
+<p>Dentro de la carpeta <strong>contracts</strong> encontramos a <code>Concurso.sol</code>, vamos a este archivo y reemplazamos su contenido por el siguiente contrato.
+<div class="highlight"><pre><span></span><code>// SPDX-License-Identifier: MIT
+pragma solidity &gt;=0.4.22 &lt;0.9.0;
 
+contract Concurso {
+  address public owner;
 
+  // mapa que relaciona direccion con cantidad depositada
+  mapping (address =&gt; uint) public balanceOf;
+
+  // cantidad totpublic al depositada
+  uint public deposited;
+
+  // el creador del contrato se establece como duenio
+  constructor() {
+    owner = msg.sender;
+  }
+
+  // cuando usemos &#39;onlyOwner&#39; se verificara que la operacion este siendo realizada por el creador del contrato
+  modifier onlyOwner {
+    require(msg.sender == owner);
+    _;
+  }
+
+  // &#39;payable&#39; permite que el contrato pueda recibir transferencias
+  function deposit() public payable {
+    // mas adelante agregaremos verificaciones aqui
+
+    balanceOf[msg.sender] += msg.value;
+    deposited += msg.value;
+  }
+
+  function getBalanceOf(address _user) public view returns (uint balance) {
+    return balanceOf[_user];
+  }
+
+  function transfer(address _to, uint _value) public {
+    // mas adelante agregaremos verificaciones aqui
+
+    balanceOf[msg.sender] -= _value;
+    balanceOf[_to] += _value;
+  }
+
+  function withdraw(uint _ammount) public onlyOwner {
+    require(_ammount &lt;= deposited);
+    deposited -= _ammount;
+    payable(msg.sender).transfer(_ammount);
+  }
+}
+</code></pre></div></p>
+<p>Luego vamos a <code>Migrations.sol</code> el cuál es usado por Truffle para llevar control del despliegue del proyecto, y colocamos el siguiente código.
+<div class="highlight"><pre><span></span><code>// SPDX-License-Identifier: MIT
+pragma solidity &gt;=0.4.22 &lt;0.9.0;
+
+contract Migrations {
+  address public owner = msg.sender;
+  uint public last_completed_migration;
+
+  modifier restricted() {
+    require(
+      msg.sender == owner,
+      &quot;This function is restricted to the contract&#39;s owner&quot;
+    );
+    _;
+  }
+
+  function setCompleted(uint completed) public restricted {
+    last_completed_migration = completed;
+  }
+}
+</code></pre></div></p>
+<h2 id="preparando-la-migracion">Preparando la migración<a class="headerlink" href="#preparando-la-migracion" title="Permanent link">&para;</a></h2>
+<p>Migración es el término que se usa en Truffle para referirse a desplegar un contrato.</p>
+<p>Regresamos a la carpeta principal de nuestro proyecto y buscamos el archivo <code>truffle-config.js</code>. Dentro de este, buscamos <code>networks</code> y dentro encontraremos <code>development</code>. El siguiente código aparece como comentario, eliminamos los <code>//</code> para activarlo.
+<div class="highlight"><pre><span></span><code>development: {
+    host: &quot;127.0.0.1&quot;,     // Localhost (default: none)
+    port: 8545,            // Standard Ethereum port (default: none)
+    network_id: &quot;*&quot;,       // Any network (default: none)
+},
+</code></pre></div></p>
+<p>Por el momento no necesitamos ninguna otra modificación en este archivo.</p>
+<p>Podemos ir ahora a la carpeta <strong>migrations</strong> en donde le indicaremos a Truffle cómo desplegar nuestros contratos. En esta carpeta crearemos dos archivos, <code>1_initial_migration.js</code> y <code>2_deploy_contracts.js</code>. Es importante que el nombre de esos archivos inicie con esos números, pues esto le indica a Truffle en qué orden operar. El contenido de los archivos es el siguiente.</p>
+<div class="highlight"><pre><span></span><code>// 1_initial_migrations.js
+
+const Migrations = artifacts.require(&quot;Migrations&quot;);
+
+module.exports = function (deployer) {
+  deployer.deploy(Migrations);
+};
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// 2_deploy_contracts.js
+
+const Concurso = artifacts.require(&quot;Concurso&quot;);
+
+module.exports = function(deployer) {
+  deployer.deploy(Concurso);
+};
+</code></pre></div>
+<h2 id="preparando-ganache">Preparando Ganache<a class="headerlink" href="#preparando-ganache" title="Permanent link">&para;</a></h2>
+<p>Vamos a la carpeta donde descargamos y le dimos permiso a Ganache, y lo ejecutamos.</p>
+<p>Al iniciarse elegimos la opción <strong>new workspace</strong>.</p>
+<figure>
+<p><img alt="Account" src="../../../img/part3-ganache1.png" />
+  </p>
+<figcaption>New workspace nos permite asociar un proyecto de Truffle al blockchain</figcaption>
+</figure>
+<p>Colocamos un nombre al espacio de trabajo, luego usamos <strong>add project</strong> para buscar y agregar el archivo de configuración de Truffle para nuestro proyecto actual. Luego de esto, hacemos click en <strong>save project</strong>.</p>
+<figure>
+<p><img alt="Account" src="../../../img/part3-ganache2.png" />
+  </p>
+<figcaption>Seleccionamos el proyecto que hemos estado preparando</figcaption>
+</figure>
+<p>Ganache ahora ha iniciado un blockchain local sobre el cual podremos hacer pruebas.</p>
+<figure>
+<p><img alt="Account" src="../../../img/part3-ganache3.png" />
+  </p>
+<figcaption>Direcciones que podremos utilizar más adelante</figcaption>
+</figure>
+<p>Con Ganache funcionando vamos a nuestra terminal, donde ejecutaremos el siguiente comando para iniciar la migración. Nos aseguramos de estar en la carpeta de nuestro proyecto de Truffle.
+<div class="highlight"><pre><span></span><code>truffle migrate
+</code></pre></div></p>
+<p>Truffle compilará nuestros contratos, los desplegará en el blockchain y tras algunos segundos nos mostrará un resumen si la migración fue exitosa.</p>
+<figure>
+<p><img alt="Account" src="../../../img/part3-ganache4.png" />
+  </p>
+<figcaption>Resumen de la migración</figcaption>
+</figure>
+<p>Ahora podemos ir a Ganache y revisar las pestañas de <strong>transactions</strong> y <strong>contracts</strong>. Podemos hacer click en estas para ver más detalles.</p>
+<figure>
+<p><img alt="Account" src="../../../img/part3-ganache5.png" />
+  </p>
+<figcaption>La migración realizó cuatro transacciones en total</figcaption>
+</figure>
+<figure>
+<p><img alt="Account" src="../../../img/part3-ganache7.png" />
+  </p>
+<figcaption>Fueron desplegados dos contratos</figcaption>
+</figure>
+<figure>
+<p><img alt="Account" src="../../../img/part3-ganache6.png" />
+  </p>
+<figcaption>Detalles adicionales al hacer click en uno de los contratos</figcaption>
+</figure>
 
               
             </article>
@@ -997,7 +1274,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../truffle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Transacciones con Truffle" rel="prev">
+        <a href="../installing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Instalación de herramientas" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1006,20 +1283,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Transacciones con Truffle
+              Instalación de herramientas
             </div>
           </div>
         </a>
       
       
         
-        <a href="../testing/" class="md-footer__link md-footer__link--next" aria-label="Next: Pruebas en Ganache" rel="next">
+        <a href="../testnet/" class="md-footer__link md-footer__link--next" aria-label="Next: Desplegando contratos en testnet" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Pruebas en Ganache
+              Desplegando contratos en testnet
             </div>
           </div>
           <div class="md-footer__button md-icon">

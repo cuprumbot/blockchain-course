@@ -534,9 +534,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Explorando el blockchain
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Explorando el blockchain
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bloques" class="md-nav__link">
+    Bloques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transacciones" class="md-nav__link">
+    Transacciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direcciones" class="md-nav__link">
+    Direcciones
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -705,36 +750,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../part3/truffle/" class="md-nav__link">
-        Transacciones con Truffle
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../part3/ganache/" class="md-nav__link">
-        Contratos en Ganache
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../part3/testing/" class="md-nav__link">
-        Pruebas en Ganache
+        Desplegando contratos en Ganache
       </a>
     </li>
   
@@ -749,6 +766,34 @@
     <li class="md-nav__item">
       <a href="../../part3/testnet/" class="md-nav__link">
         Desplegando contratos en testnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3/testing/" class="md-nav__link">
+        Pruebas con Truffle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../part3/truffle/" class="md-nav__link">
+        Transacciones con Truffle
       </a>
     </li>
   
@@ -972,6 +1017,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bloques" class="md-nav__link">
+    Bloques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transacciones" class="md-nav__link">
+    Transacciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direcciones" class="md-nav__link">
+    Direcciones
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -989,6 +1063,90 @@
 
 
 <h1 id="explorando-el-blockchain">Explorando el blockchain<a class="headerlink" href="#explorando-el-blockchain" title="Permanent link">&para;</a></h1>
+<p>Todas las transacciones realizadas quedan registradas en el blockchain. Podemos explorar este desde nuestro navegador usando sitios como <a href="https://goerli.etherscan.io">Etherscan</a>. Recuerda que estamos trabajando en la testnet Goerli, entonces asegurate de ingresar a la página correcta, de lo contrario verás transacciones de la red principal.</p>
+<h2 id="bloques">Bloques<a class="headerlink" href="#bloques" title="Permanent link">&para;</a></h2>
+<p>Entra a <a href="https://goerli.etherscan.io">Etherscan</a> y en el lado izquierdo haz click sobre un bloque.</p>
+<figure>
+<p><img alt="Account" src="../../../img/part2-explorer1.png" />
+  </p>
+<figcaption>Bloques recientes en Etherscan</figcaption>
+</figure>
+<p>Tras seleccionar un bloque, podrás ver bastante información sobre este. Algunos de los datos más importantes son:</p>
+<ul>
+<li><strong>Transactions:</strong> Cantidad de transacciones incluídas como parte de este bloque.</li>
+<li><strong>Block reward</strong> y <strong>fee recipient:</strong> Cuál fue la recompensa por operar este bloque y a quién fue pagada.</li>
+<li><strong>Gas used:</strong> Gas consumido. Este es pagado por quien realizo la transacción y es entregado como recompensa del bloque.</li>
+<li><strong>Burnt fees:</strong> Cuánto ETH fue <strong>quemado</strong>, es decir, dejó de existir permanentemente.</li>
+<li><strong>Parent hash:</strong> Hash del bloque anterior para garantizar integridad de la cadena.</li>
+</ul>
+<figure>
+<p><img alt="Account" src="../../../img/part2-explorer3.png" />
+  </p>
+<figcaption>Información del bloque</figcaption>
+</figure>
+<p>Puedes hacer click sobre la cantidad de transacciones para ver un listado de estas.</p>
+<figure>
+<p><img alt="Account" src="../../../img/part2-explorer5.png" />
+  </p>
+<figcaption>Ver lista de transacciones del bloque</figcaption>
+</figure>
+<figure>
+<p><img alt="Account" src="../../../img/part2-explorer4.png" />
+  </p>
+<figcaption>Lista de transacciones</figcaption>
+</figure>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>Explora un bloque de la <a href="https://etherscan.io">red principal</a>. Compara los valores como <strong>block reward</strong>, <strong>gas used</strong> y <strong>burnt fees</strong>.</p>
+<p>Como la red principal tiene una demanda mucho mayor, los precios son más altos.</p>
+</div>
+<h2 id="transacciones">Transacciones<a class="headerlink" href="#transacciones" title="Permanent link">&para;</a></h2>
+<p>Haz click en el botón de Metamask y en la parte de abajo has click en la transacción realizada en el ejercicio pasado.</p>
+<figure>
+<p><img alt="Account" src="../../../img/part2-explorer6.png" />
+  </p>
+<figcaption>Transacción que realizamos previamente</figcaption>
+</figure>
+<p>Luego haz click en <strong>view on block explorer</strong> para ver tu transacción en Etherscan.</p>
+<figure>
+<p><img alt="Account" src="../../../img/part2-explorer7.png" />
+  </p>
+<figcaption>Enlace hacia el explorador de bloques</figcaption>
+</figure>
+<p>Podrás ver muchos detalles sobre la transacción. Algunos de los más importantes son:</p>
+<ul>
+<li><strong>From</strong> y <strong>to:</strong> Direcciones de quien envía y quien recibe el ETH.</li>
+<li><strong>Value</strong> y <strong>transaction fee:</strong> Cantidad de ETH enviada y cuánto se pagó como costo de la transacción.</li>
+<li><strong>Gas price</strong> y <strong>gas fees:</strong> Precios de cada unidad de gas al momento de realizada la transacción.</li>
+<li><strong>Gas limit:</strong> Cuántas unidades de gas se consumieron. Una transacción para enviar ETH consume 21000 unidades.</li>
+</ul>
+<figure>
+<p><img alt="Account" src="../../../img/part2-explorer9.png" />
+  </p>
+<figcaption>Detalles de la transacción</figcaption>
+</figure>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>Ve a la red principal en Etherscan y explora alguna transacción de tipo <strong>transfer</strong>. Compara los valores de <strong>gas price</strong>, <strong>gas fees</strong> y <strong>gas limit</strong>.</p>
+<p>Una transferencia cuesta 21000 unidades de gas sin importar qué red sea.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>Busca varias transacciones cuyo tipo no sea <strong>transfer</strong> y observa cuáanto es su <strong>gas limit</strong>.</p>
+<p>Distintas operaciones tienen costos distintos.</p>
+</div>
+<h2 id="direcciones">Direcciones<a class="headerlink" href="#direcciones" title="Permanent link">&para;</a></h2>
+<p>Abre Metamask y copia la dirección de tu billetera. Ingresa esta dirección en el buscador de Etherscan. Aquí podrás ver tu balance y transacciones realizadas.</p>
+<figure>
+<p><img alt="Account" src="../../../img/part2-explorer8.png" />
+  </p>
+<figcaption>Transacciones entrantes y salientes de mi dirección</figcaption>
+</figure>
+<p>Es posible seguir un camino entre direcciones y transacciones para saber cómo se están moviendo ciertos fondos.</p>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>Podemos explorar las <a href="https://etherscan.io/accounts">direcciones con más ETH</a> en la red principal. La mayoría de estas están identificadas y pertenecen a algún exchange. Haz click en alguna y observa la gran cantidad de transacciones que cada una realiza.</p>
+</div>
 
               
             </article>
