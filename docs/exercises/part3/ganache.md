@@ -1,4 +1,4 @@
-# Contratos con Ganache
+# Desplegando contratos en Ganache
 
 Crearemos nuestro primer contrato inteligente y lo probaremos de forma local utilizando Ganache. También usaremos Truffle como soporte para desplegar el contrato.
 

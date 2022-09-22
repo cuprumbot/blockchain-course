@@ -52,7 +52,10 @@ truffle test
 
 Truffle ejecutará estas pruebas de forma interna y al final nos mostrará si estas fueron exitosas.
 
-IMAGEN
+<figure markdown>
+  ![Truffle](../../img/part3-test.png)
+  <figcaption>Resultado de ejecutar pruebas</figcaption>
+</figure>
 
 ## Realizando más pruebas
 
