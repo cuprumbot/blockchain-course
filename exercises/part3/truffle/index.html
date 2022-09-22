@@ -813,9 +813,68 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Transacciones con Truffle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Transacciones con Truffle
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilizando-la-consola" class="md-nav__link">
+    Utilizando la consola
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobando-nuestra-informacion" class="md-nav__link">
+    Comprobando nuestra información
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contratos" class="md-nav__link">
+    Contratos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web3" class="md-nav__link">
+    web3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transacciones" class="md-nav__link">
+    Transacciones
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -992,6 +1051,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utilizando-la-consola" class="md-nav__link">
+    Utilizando la consola
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobando-nuestra-informacion" class="md-nav__link">
+    Comprobando nuestra información
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contratos" class="md-nav__link">
+    Contratos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web3" class="md-nav__link">
+    web3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transacciones" class="md-nav__link">
+    Transacciones
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1009,7 +1111,94 @@
 
 
 <h1 id="transacciones-con-truffle">Transacciones con Truffle<a class="headerlink" href="#transacciones-con-truffle" title="Permanent link">&para;</a></h1>
-<p>TODO: Desplegar un contrado hacia el cual los estudiantes puedan interactuar</p>
+<p>Después de desplegar nuestro contrato hacia testnet, podemos usar la consola de Truffle para interactuar con este.</p>
+<h2 id="utilizando-la-consola">Utilizando la consola<a class="headerlink" href="#utilizando-la-consola" title="Permanent link">&para;</a></h2>
+<p>Con nuestra terminal en la misma carpeta desde la cual desplegamos nuestro contrato, inicializamos la consola con el siguiente comando.
+<div class="highlight"><pre><span></span><code>truffle console --network goerli
+</code></pre></div></p>
+<p>En esta terminal podemos usar comandos como <code>compile</code> y <code>migrate</code>. Normalmente es más cómodo usarlos como ya lo hicimos anteriormente, <code>truffle migrate --network goerli</code>, pues nos ahorramos el paso de abrir la consola.</p>
+<div class="admonition hint">
+<p class="admonition-title">Ayuda</p>
+<p>Si necesitamos más información sobre cómo usar un comando, podemos anteponer <code>help</code> a este.</p>
+<p>Por ejemplo, si necesito ayuda acerca del comando <code>migrate</code> escribo <code>help migrate</code> en la terminal.</p>
+</div>
+<h2 id="comprobando-nuestra-informacion">Comprobando nuestra información<a class="headerlink" href="#comprobando-nuestra-informacion" title="Permanent link">&para;</a></h2>
+<p>Por el momento utilizaremos el comando <code>networks</code> para obtener información del testnet actual y verificar las direcciones en las que desplegamos nuestros contratos.</p>
+<p>Ingresamos el siguiente comando en la terminal.
+<div class="highlight"><pre><span></span><code>networks
+</code></pre></div></p>
+<p>Al hacerlo veremos los contratos desplegados y sus direcciones.</p>
+<p>TO DO IMAGEN</p>
+<p>Luego utilizaremos el comando <code>accounts</code> para asegurarnos que Truffle pudo usar nuestras credenciales.</p>
+<p>Ingresamos el siguiente comando en la terminal.
+<div class="highlight"><pre><span></span><code>accounts
+</code></pre></div></p>
+<p>Y luego veremos las direcciones generadas a partir de nuestras llaves.</p>
+<p>TO DO IMAGEN</p>
+<h2 id="contratos">Contratos<a class="headerlink" href="#contratos" title="Permanent link">&para;</a></h2>
+<p>Utilizando Truffle podemos obtener información detallada de alguno de los contratos que hemos compilado o desplegado.</p>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>En la terminal de Truffle ingresa esta instrucción <code>let instance = await Contract.deployed()</code>.</p>
+<p>Después escribe <code>instance.address</code> o <code>instance.methods</code>. De esta forma puedes obtener algo de información básica del contrato.</p>
+<p>Si quieres aún más información escribe <code>instance.abi</code> o <code>instance.contract</code> para ver información más completa.</p>
+</div>
+<h2 id="web3">web3<a class="headerlink" href="#web3" title="Permanent link">&para;</a></h2>
+<p>Web3.js es una librería con diversas funcionalidad para la plataforma Ethereum.</p>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>Si deseas conocer cuanto ETH tienes disponible en una cuenta, puedes usar los siguientes comandos. <code>getBalance()</code> obtendrá la cantidad disponible expresada en <strong>wei</strong> y luego <code>fromWei()</code> la transformará a la unidad indicada, <strong>ether</strong> en este caso.
+<div class="highlight"><pre><span></span><code>let balance = await web3.eth.getBalance(accounts[0])
+let ether = await web3.utils.fromWei(balance, &#39;ether&#39;)
+ether
+</code></pre></div></p>
+<p>Para conocer el precio actual del gas, podemos usar el siguiente comando.
+<div class="highlight"><pre><span></span><code>web3.eth.getGasPrice()
+</code></pre></div></p>
+<p>El comando <code>getBlock()</code> nos da toda la información relevante a un bloque. Al usarlo, cambia el número que aparece en el siguiente comando por el número del bloque deseado.
+<div class="highlight"><pre><span></span><code>web3.eth.getBlock(7636163)
+</code></pre></div></p>
+<p>Finalmente, <code>getTransaction()</code> es otra operación útil que nos da información sobre una transacción. Cambia el hash que aparece abajo por el hash de la transacción deseada, asegurate de enviar este dato como una cadena de caracteres.
+<div class="highlight"><pre><span></span><code>web3.eth.getTransaction(&#39;0xacdbd478099d729156c6343ca415ac27249ac6f436188dc5c45282913c3ee773&#39;)
+</code></pre></div></p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Conoce más</p>
+<p>Web3 nos ofrece aún más funcionalidad. Puedes conocerla completa en los siguientes enlaces.</p>
+<ul>
+<li><a href="https://web3js.readthedocs.io/en/v1.2.11/web3-eth.htm">web3.eth, funciones principales</a></li>
+<li><a href="https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html">web3.utils, funciones auxiliares</a></li>
+</ul>
+</div>
+<h2 id="transacciones">Transacciones<a class="headerlink" href="#transacciones" title="Permanent link">&para;</a></h2>
+<p>Ahora que ya conocemos la terminal de Truffle realizaremos nuestra primera transacción, la cuál será un depósito hacia el contrato.</p>
+<p>En la primera instrucción reemplaza <code>0.01</code> por la cantidad de ETH que quieras depositar.</p>
+<div class="highlight"><pre><span></span><code>let ammount = web3.utils.toWei(&#39;0.01&#39;, &#39;ether&#39;)
+let result = await instance.deposit({from: accounts[0], value: ammount})
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Asegurate de haber obtenido una instancia del contrato antes de ejecutar estos comandos.</p>
+<p>Asegurate que la cuenta usada (<code>accounts[0]</code> en nuestro caso) tenga suficientes fondos para depositar.</p>
+</div>
+<p>Tras algunos segundos de espera, puedes ingresar <code>result</code> en la terminal para ver la información resultante. Allí encontrarás un dato llamado <code>transactionHash</code> que puedes buscar en Etherscan para obtener esta misma información de una forma quizás más cómoda.</p>
+<p>Ahora realizaremos un retiro.</p>
+<div class="highlight"><pre><span></span><code>ammount = web3.utils.toWei(&#39;0.005&#39;, &#39;ether&#39;)
+result = await instance.withdraw(ammount, {from: accounts[0]})
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Ya no colocamos <code>let</code> pues ya existen las variables <code>ammount</code> y <code>result</code>.</p>
+<p>Anteriormente al hacer tests locales comprobamos que solo el creador del contrato (es decir <code>accounts[0]</code>) puede realizar retiros. Si intentas usar otra cuenta, esta transacción fallará.</p>
+</div>
+<p>Finalmente podemos consultar la cantidad de ETH restante tras el depósito.</p>
+<div class="highlight"><pre><span></span><code>let bn = await instance.deposited()
+let deposited = bn.toNumber()
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>La función <code>deposited()</code> nos devuelve un <strong>objeto BN</strong>, es decir un BigNumber, por lo cuál debemos convertirlo. Al convertirlo tendremos una cantidad en <strong>wei</strong> que podríamos convertir a <strong>ether</strong> usando la función <code>fromWei()</code>.</p>
+</div>
 
               
             </article>
