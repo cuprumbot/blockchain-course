@@ -27,14 +27,13 @@ markdown_extensions:
 extra_css:
   - stylesheets/custom.css
 
-extra_javascript:
-  - js/custom.js
+#extra_javascript:
+#  - js/custom.js
 
 nav:
   - Inicio: index.md
   - Semana 1 - Introducción:
-    - Teoría:
-      - 'Placeholder' : 'lessons/lesson1.md'
+    - 'Teoría' : 'lessons/lesson1.md'
     - Práctica:
       - 'Cálculo de un hash' : 'exercises/part1/hash.md'
       - 'Encontrando un nonce' : 'exercises/part1/nonce.md'
@@ -42,28 +41,25 @@ nav:
       - 'Instalación de billetera' : 'exercises/part1/wallet.md'
       - 'Uso de faucet' : 'exercises/part1/faucet.md'
   - Semana 2 - Conceptos clave:
-    - Teoría:
-      - 'Placeholder' : 'lessons/lesson2.md'    
+    - 'Teoría' : 'lessons/lesson2.md'    
   - Semana 3 - Aplicaciones:
-    - Teoría:
-      - 'Placeholder' : 'lessons/lesson3.md'
+    - 'Teoría' : 'lessons/lesson3.md'
     - Práctica:
       - 'Realizando una transacción' : 'exercises/part2/transaction.md'
       - 'Explorando el blockchain' : 'exercises/part2/explorer.md'
       - 'Identificando transacciones' : 'exercises/part2/calls.md'
   - Semana 4 - Contratos inteligentes:
-    - Teoría:
-      - 'Placeholder' : 'lessons/lesson4.md'
+    - 'Teoría' : 'lessons/lesson4.md'
     - Práctica:
       - 'Instalación de herramientas' : 'exercises/part3/installing.md'
       - 'Desplegando contratos en Ganache' : 'exercises/part3/ganache.md'
       - 'Desplegando contratos en testnet' : 'exercises/part3/testnet.md'
       - 'Pruebas con Truffle' : 'exercises/part3/testing.md'
       - 'Transacciones con Truffle' : 'exercises/part3/truffle.md'
-  - Semana 5 - Práctica:
-    - Práctica:
-      - 'Errores por falta de gas' : 'exercises/part4/gas.md'
-      - 'Leer y escribir hacia contrato' : 'exercises/part4/interaction.md'
-      - 'Logs como almacenamiento barato' : 'exercises/part4/log.md'
-      - 'Utilizando Webpack' : 'exercises/part4/webpack.md'
-      - 'Web3 para interactuar con contrato' : 'exercises/part4/web3.md'
+#  - Semana 5 - Práctica:
+#    - Práctica:
+#      - 'Errores por falta de gas' : 'exercises/part4/gas.md'
+#      - 'Leer y escribir hacia contrato' : 'exercises/part4/interaction.md'
+#      - 'Logs como almacenamiento barato' : 'exercises/part4/log.md'
+#      - 'Utilizando Webpack' : 'exercises/part4/webpack.md'
+#      - 'Web3 para interactuar con contrato' : 'exercises/part4/web3.md'

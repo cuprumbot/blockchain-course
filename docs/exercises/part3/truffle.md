@@ -27,7 +27,10 @@ networks
 
 Al hacerlo veremos los contratos desplegados y sus direcciones.
 
-TO DO IMAGEN
+<figure markdown>
+  ![Console](../../img/part3-console1.png)
+  <figcaption>Contratos desplegados</figcaption>
+</figure>
 
 Luego utilizaremos el comando `accounts` para asegurarnos que Truffle pudo usar nuestras credenciales.
 
@@ -38,7 +41,10 @@ accounts
 
 Y luego veremos las direcciones generadas a partir de nuestras llaves.
 
-TO DO IMAGEN
+<figure markdown>
+  ![Console](../../img/part3-console2.png)
+  <figcaption>Direcciones de nuestras cuentas</figcaption>
+</figure>
 
 ## Contratos
 
