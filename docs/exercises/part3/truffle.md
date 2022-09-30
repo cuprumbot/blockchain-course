@@ -51,7 +51,7 @@ Y luego veremos las direcciones generadas a partir de nuestras llaves.
 Utilizando Truffle podemos obtener información detallada de alguno de los contratos que hemos compilado o desplegado.
 
 !!! question "Experimenta"
-    En la terminal de Truffle ingresa esta instrucción `let instance = await Contract.deployed()`.
+    En la terminal de Truffle ingresa esta instrucción `let instance = await Concurso.deployed()`.
     
     Después escribe `instance.address` o `instance.methods`. De esta forma puedes obtener algo de información básica del contrato.
 

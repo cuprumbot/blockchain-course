@@ -56,10 +56,10 @@ nav:
       - 'Desplegando contratos en testnet' : 'exercises/part3/testnet.md'
       - 'Pruebas con Truffle' : 'exercises/part3/testing.md'
       - 'Transacciones con Truffle' : 'exercises/part3/truffle.md'
-#  - Semana 5 - Práctica:
-#    - Práctica:
-#      - 'Errores por falta de gas' : 'exercises/part4/gas.md'
-#      - 'Leer y escribir hacia contrato' : 'exercises/part4/interaction.md'
-#      - 'Logs como almacenamiento barato' : 'exercises/part4/log.md'
+  - Semana 5 - Práctica:
+    - Práctica:
+      - 'Errores por falta de gas' : 'exercises/part4/gas.md'
+      - 'Logs como almacenamiento barato' : 'exercises/part4/log.md'
+      - 'Leer y escribir hacia contrato' : 'exercises/part4/interaction.md'
 #      - 'Utilizando Webpack' : 'exercises/part4/webpack.md'
 #      - 'Web3 para interactuar con contrato' : 'exercises/part4/web3.md'
