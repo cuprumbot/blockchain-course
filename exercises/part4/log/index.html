@@ -17,7 +17,7 @@
     
     
       
-        <title>Log - Blockchain</title>
+        <title>Logs como almacenamiento barato - Blockchain</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#utilizando-los-logs-como-almacenamiento-barato" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Log
+              Logs como almacenamiento barato
             
           </span>
         </div>
@@ -684,6 +689,174 @@
   
 
     
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Semana 5 - Práctica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Semana 5 - Práctica" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Semana 5 - Práctica
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Práctica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Práctica" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Práctica
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gas/" class="md-nav__link">
+        Errores por falta de gas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Logs como almacenamiento barato
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Logs como almacenamiento barato
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comparando-costos-en-despliegue-de-contrato" class="md-nav__link">
+    Comparando costos en despliegue de contrato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparando-costos-en-transacciones" class="md-nav__link">
+    Comparando costos en transacciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accediendo-a-la-informacion-guardada-en-un-log" class="md-nav__link">
+    Accediendo a la información guardada en un log
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interaction/" class="md-nav__link">
+        Leer y escribir hacia contrato
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -701,6 +874,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comparando-costos-en-despliegue-de-contrato" class="md-nav__link">
+    Comparando costos en despliegue de contrato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparando-costos-en-transacciones" class="md-nav__link">
+    Comparando costos en transacciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accediendo-a-la-informacion-guardada-en-un-log" class="md-nav__link">
+    Accediendo a la información guardada en un log
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -718,9 +922,147 @@
 
 
 
-  <h1>Log</h1>
+<h1 id="utilizando-los-logs-como-almacenamiento-barato">Utilizando los logs como almacenamiento barato<a class="headerlink" href="#utilizando-los-logs-como-almacenamiento-barato" title="Permanent link">&para;</a></h1>
+<p>Crear variables para almacenar datos puede resultar costoso, por lo tanto puede ser conveniente utilizar logs para guardar nuestra información.</p>
+<h2 id="comparando-costos-en-despliegue-de-contrato">Comparando costos en despliegue de contrato<a class="headerlink" href="#comparando-costos-en-despliegue-de-contrato" title="Permanent link">&para;</a></h2>
+<p>Iniciamos un nuevo proyecto, nos aseguramos de instalar las librerías necesarias en esta carpeta, y crearemos varios contratos.</p>
+<div class="highlight"><pre><span></span><code>mkdir storage
+cd storage
+truffle init
 
+npm install dotenv
+npm install @truffle/hdwallet-provider
 
+truffle create contract Storage
+truffle create contract Log
+truffle create contract Migrations
+</code></pre></div>
+<p>Dentro de los contratos en la carpeta <code>contracts</code> colocaremos el siguiente código.</p>
+<div class="highlight"><pre><span></span><code>/* Storage */
+
+// SPDX-License-Identifier: MIT
+pragma solidity &gt;=0.4.22 &lt;0.9.0;
+
+contract Storage {
+  address private owner;
+
+  int public score;
+
+  constructor() public {
+    owner = msg.sender;
+  }
+
+  function reportScore (int _score) public {
+    require(msg.sender == owner, &quot;Only the owner is authorized to report events&quot;);
+
+    score = _score;
+  }
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>/* Log */
+
+// SPDX-License-Identifier: MIT
+pragma solidity &gt;=0.4.22 &lt;0.9.0;
+
+contract Log {
+  address private owner;
+
+  constructor() public {
+    owner = msg.sender;
+  }
+
+  event LogScore(address _sender, int indexed _score);
+
+  function reportScore (int _score) public {
+    require(msg.sender == owner, &quot;Only the owner is authorized to report events&quot;);
+
+    emit LogScore(msg.sender, _score);
+  }
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>/* Migrations */
+
+// SPDX-License-Identifier: MIT
+pragma solidity &gt;=0.4.22 &lt;0.9.0;
+
+contract Migrations {
+  address public owner = msg.sender;
+  uint public last_completed_migration;
+
+  modifier restricted() {
+    require(
+      msg.sender == owner,
+      &quot;This function is restricted to the contract&#39;s owner&quot;
+    );
+    _;
+  }
+
+  function setCompleted(uint completed) public restricted {
+    last_completed_migration = completed;
+  }
+}
+</code></pre></div>
+<p>Adicionalmente debemos crear dos archivos con el siguiente código en la carpeta <code>migrations</code>.</p>
+<div class="highlight"><pre><span></span><code>// 1_initial_migrations.js
+
+const Migrations = artifacts.require(&quot;Migrations&quot;);
+
+module.exports = function (deployer) {
+  deployer.deploy(Migrations);
+};
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// 2_deploy_contracts.js
+
+const Storage = artifacts.require(&quot;Storage&quot;);
+const Log = artifacts.require(&quot;Log&quot;);
+
+module.exports = function(deployer) {
+  deployer.deploy(Storage);
+  deployer.deploy(Log);
+};
+</code></pre></div>
+<p>Para finalizar, colocamos nuestra llave dentro del archivo <code>.env</code> y modificamos el archivo <code>truffle-config.js</code> como realizamos en ejercicios anteriores. Tras preparar todo esto, estamos listos para realizar la migración.</p>
+<div class="highlight"><pre><span></span><code>truffle migrate --network goerli
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">Compara</p>
+<p>Desplegar <strong>Storage</strong> tuvo un costo de 213661 unidades de gas. Desplegar <strong>Log</strong> debió costar 224881 unidades de gas.</p>
+<p>De momento parece que <strong>Storage</strong> es más barato, pero esto cambiará cuando empecemos a realizar transacciones.</p>
+</div>
+<h2 id="comparando-costos-en-transacciones">Comparando costos en transacciones<a class="headerlink" href="#comparando-costos-en-transacciones" title="Permanent link">&para;</a></h2>
+<p>Ahora usaremos la terminal de Truffle para realizar una transacción para almacenar información en cada contrato. Iniciaremos con <strong>Storage</strong>.</p>
+<div class="highlight"><pre><span></span><code>let storage = await Storage.deployed()
+let storageResult = await storage.reportScore(12345)
+storageResult.receipt.gasUsed
+</code></pre></div>
+<p>Luego almacenaremos información en <strong>Log</strong>. Aunque ahora estamos usando log en lugar de variables, la llamada al contrato se ve igual.</p>
+<div class="highlight"><pre><span></span><code>let log = await Log.deployed()
+let logResult = await log.reportScore(12345)
+logResult.receipt.gasUsed
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">Compara</p>
+<p>Almacenar en la variable de <strong>Storage</strong> tuvo un costo de 45881 unidades de gas. Generar un log en <strong>Log</strong> tuvo un costo significativamente más bajo de solo 25384 unidades de gas.</p>
+<p>A pesar que desplegar <strong>Log</strong> fue ligeramente más costoso, sus operaciones siguientes son mucho más baratas.</p>
+</div>
+<h2 id="accediendo-a-la-informacion-guardada-en-un-log">Accediendo a la información guardada en un log<a class="headerlink" href="#accediendo-a-la-informacion-guardada-en-un-log" title="Permanent link">&para;</a></h2>
+<p>Leer una variables es bastante sencillo, como vimos en ejercicios anteriores. Usamos el siguiente código para leer y transformar a número el BigNumber leído.</p>
+<div class="highlight"><pre><span></span><code>let bn = await storage.score()
+bn.toNumber()
+</code></pre></div>
+<p>La lectura de logs se realiza de forma diferente. Primero obtenemos un arreglo que contiene todos los logs con el siguiente código. Si quisieramos obtener solo los más recientes, podemos indicar algún bloque en específico con <code>fromBlock: 0</code>.</p>
+<div class="highlight"><pre><span></span><code>let logs = await log.getPastEvents(&quot;LogScore&quot;, {fromBlock: 0}) 
+</code></pre></div>
+<p>Luego tenemos varias formas de visualizar el valor que guardamos. Las siguientes dos líneas permiten obtenerlo como hexadecimal o como decimal respectivamente.</p>
+<div class="highlight"><pre><span></span><code>logs[0].raw.topics[1]
+logs[0].args._score.toNumber()
+</code></pre></div>
+<p>Adicionalmente, también podemos obtener información de cuándo se realizó el almacenamiento si usamos este código. Debemos recordar que las transacciones no se realizan de forma inmediata, sino que se ejecutan cuando son aceptadas como parte de un bloque. Aquí obtendremos el timestamp del bloque en formato Unix.</p>
+<div class="highlight"><pre><span></span><code>let blockNumber = logs[0].blockNumber
+let block = await web3.eth.getBlock(blockNumber)
+block.timestamp
+</code></pre></div>
+<p>En conclusión, los logs pueden usarse como una forma de almacenamiento más poderosa y más barata que las variables.</p>
 
               
             </article>
@@ -731,6 +1073,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../gas/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Errores por falta de gas" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Errores por falta de gas
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../interaction/" class="md-footer__link md-footer__link--next" aria-label="Next: Leer y escribir hacia contrato" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Leer y escribir hacia contrato
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

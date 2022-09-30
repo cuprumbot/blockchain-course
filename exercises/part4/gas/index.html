@@ -17,7 +17,7 @@
     
     
       
-        <title>Gas - Blockchain</title>
+        <title>Errores por falta de gas - Blockchain</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#errores-por-falta-de-gas" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gas
+              Errores por falta de gas
             
           </span>
         </div>
@@ -684,6 +689,167 @@
   
 
     
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Semana 5 - Práctica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Semana 5 - Práctica" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Semana 5 - Práctica
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Práctica
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Práctica" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Práctica
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Errores por falta de gas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Errores por falta de gas
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gas-insuficiente" class="md-nav__link">
+    Gas insuficiente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#precio-muy-bajo-por-unidad-de-gas" class="md-nav__link">
+    Precio muy bajo por unidad de gas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../log/" class="md-nav__link">
+        Logs como almacenamiento barato
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interaction/" class="md-nav__link">
+        Leer y escribir hacia contrato
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -701,6 +867,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gas-insuficiente" class="md-nav__link">
+    Gas insuficiente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#precio-muy-bajo-por-unidad-de-gas" class="md-nav__link">
+    Precio muy bajo por unidad de gas
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -718,9 +908,65 @@
 
 
 
-  <h1>Gas</h1>
-
-
+<h1 id="errores-por-falta-de-gas">Errores por falta de gas<a class="headerlink" href="#errores-por-falta-de-gas" title="Permanent link">&para;</a></h1>
+<p>El mayor limitante al momento de desplegar contratos sobre Ethereum suele ser el gas. Si colocamos muy pocas unidades de gas al momento de realizar una transacción, esta fallará y perderemos lo pagado. Si pagamos muy poco por cada unidad de gas, nuestra transaccción podría demorarse demasiado tiempo.</p>
+<h2 id="gas-insuficiente">Gas insuficiente<a class="headerlink" href="#gas-insuficiente" title="Permanent link">&para;</a></h2>
+<p>Realizaremos una variación al ejercicio anterior. Estando en la carpeta de nuestro contrato ya desplegado, abrimos la terminal de Truffle. Comenzamos obteniendo una instancia de nuestro contrato y preparando la transacción.</p>
+<div class="highlight"><pre><span></span><code>let instance = await Concurso.deployed()
+let ammount = web3.utils.toWei(&#39;0.01&#39;, &#39;ether&#39;)
+</code></pre></div>
+<p>Luego realizaremos una estimación del gas a usar. Podemos notar que el siguiente código es muy similar al usado en el ejercicio anterior, pero ahora agregamos <code>estimateGas()</code>. En mi caso obtengo un resultado de <strong>31745</strong>, este puede variar ligeramente dependiendo del contrato y función a llamar.</p>
+<div class="highlight"><pre><span></span><code>await instance.deposit.estimateGas({from: accounts[0], value: ammount})
+</code></pre></div>
+<p>Ahora intentaremos realizar un depósito, pero especificaremos una cantidad de gas menor a la estimada.</p>
+<div class="highlight"><pre><span></span><code>let result = await instance.deposit({from: accounts[0], value: ammount, gas: 30000})
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>¿Qué resultado obtuvimos? Como la cantidad de gas fue menor a la estimada, mi transacción debió haber fallado. Obtendremos un mensaje de error similar al siguiente (su hash será distinto).</p>
+<div class="highlight"><pre><span></span><code>StatusError: Transaction: 0x0123456789abcdef exited with an error (status 0) after consuming all gas.
+</code></pre></div>
+</div>
+<p>Volveremos a causar un error, pero ahora con una cantidad de gas todavía más baja.</p>
+<div class="highlight"><pre><span></span><code>let result = await instance.deposit({from: accounts[0], value: ammount, gas: 5000})
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>Ahora nuestro mensaje de error fue distinto. La cantidad de gas fue tan baja, que la transacción ni siquiera llego a ser enviada.</p>
+<div class="highlight"><pre><span></span><code>Uncaught { code: -32000, message: &#39;intrinsic gas too low&#39; }
+</code></pre></div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">No cambies la cantidad de gas</p>
+<p>Truffle es capaz de calcular la cantidad correcta de gas a usar. Un error común y grave entre nuevos desarrolladores es querer bajar esta cantidad.</p>
+<p>No cambies la cantidad de gas para evitar este tipo de errores.</p>
+</div>
+<h2 id="precio-muy-bajo-por-unidad-de-gas">Precio muy bajo por unidad de gas<a class="headerlink" href="#precio-muy-bajo-por-unidad-de-gas" title="Permanent link">&para;</a></h2>
+<p>Ahora reintentaremos la transacción con la cantidad correcta de gas, pero un pago muy bajo por cada unidad. Nuestra transacción tardará mucho tiempo en realizarse, y si bajamos lo suficiente el precio es posible que nunca se ejecute.</p>
+<p>Primero, usaremos el siguiente comando para conocer el precio actual del gas. Obtendremos un valor en wei, si removemos nueve cifras tendríamos el valor en gwei. En el testnet Goerli el gas normalmente se encuentra entre 2 y 4 gwei por unidad.</p>
+<div class="highlight"><pre><span></span><code>web3.eth.getGasPrice()
+</code></pre></div>
+<p>Ahora que conocemos el precio por unidad de gas, intentaremos pagar menos.</p>
+<div class="highlight"><pre><span></span><code>let result = await instance.deposit({from: accounts[0], value: ammount, gasPrice: 1000})
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>¿Qué resultado obtuvimos? Como el precio del gas fue demasiado bajo, recibiremos un mensaje como el siguiente.</p>
+<div class="highlight"><pre><span></span><code>{
+    code: -32000,
+    message: &#39;err: max fee per gas less than block base fee: address 0x0123456789abcdef, maxFeePerGas: 1000 baseFee: 2050705937 (supplied gas 15010499)&#39;,
+    reason: undefined
+}
+</code></pre></div>
+</div>
+<p>Ya que el precio que colocamos fue muy bajo, lo aumentaremos. Revisamos el mensaje de error anterior y usaremos un valor ligeramente mayor al que <code>baseFee</code> que nos indica. En mi caso la transacción queda de esta manera.</p>
+<div class="highlight"><pre><span></span><code>result = await instance.deposit({from: accounts[0], value: ammount, gasPrice: 2100000000})
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">Experimenta</p>
+<p>¿Qué sucedió esta vez? Como el precio del gas fue bajo, es posible que nuestra transacción haya tardado más de lo usual en ejecutarse.</p>
+<p>En Goerli por su bajo uso este efecto no es tan notable, pero puede llegar a ser algo más grave en mainnet.</p>
+</div>
 
               
             </article>
@@ -731,6 +977,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../part3/truffle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Transacciones con Truffle" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Transacciones con Truffle
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../log/" class="md-footer__link md-footer__link--next" aria-label="Next: Logs como almacenamiento barato" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Logs como almacenamiento barato
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
