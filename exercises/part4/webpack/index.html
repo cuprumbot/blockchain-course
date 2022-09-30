@@ -17,7 +17,7 @@
     
     
       
-        <title>Webpack - Blockchain</title>
+        <title>Utilizando Webpack - Blockchain</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#utilizando-webpack" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Webpack
+              Utilizando Webpack
             
           </span>
         </div>
@@ -690,12 +695,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -716,12 +723,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
       
       
       
@@ -780,6 +789,89 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Utilizando Webpack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Utilizando Webpack
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparando-el-entorno-de-trabajo" class="md-nav__link">
+    Preparando el entorno de trabajo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecutando-la-aplicacion-web" class="md-nav__link">
+    Ejecutando la aplicación web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionamiento-de-webpack" class="md-nav__link">
+    Funcionamiento de Webpack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalles-de-indexjs" class="md-nav__link">
+    Detalles de index.js
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generando-nuestra-aplicacion-web" class="md-nav__link">
+    Generando nuestra aplicación web
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -810,6 +902,51 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparando-el-entorno-de-trabajo" class="md-nav__link">
+    Preparando el entorno de trabajo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecutando-la-aplicacion-web" class="md-nav__link">
+    Ejecutando la aplicación web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionamiento-de-webpack" class="md-nav__link">
+    Funcionamiento de Webpack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalles-de-indexjs" class="md-nav__link">
+    Detalles de index.js
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generando-nuestra-aplicacion-web" class="md-nav__link">
+    Generando nuestra aplicación web
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -827,9 +964,76 @@
 
 
 
-  <h1>Webpack</h1>
-
-
+<h1 id="utilizando-webpack">Utilizando Webpack<a class="headerlink" href="#utilizando-webpack" title="Permanent link">&para;</a></h1>
+<p>Webpack es una herramienta que nos permite tomar múltiples librerías y dependencias y empaquetarlas de forma que sea fácil incluirlas en una página web. Webpack es la herramienta recomendada por Truffle para incluir Web3 e interacciones con contratos en nuestros sitios.</p>
+<h2 id="preparando-el-entorno-de-trabajo">Preparando el entorno de trabajo<a class="headerlink" href="#preparando-el-entorno-de-trabajo" title="Permanent link">&para;</a></h2>
+<p>Truffle nos provee paquetes ejemplo listos para usarse. Para usar Webpack nos provee un paquete que incluye contratos, migraciones, tests, interfaz de usuario y scripts para generar nuestro sitio.</p>
+<p>Podemos seguir las instrucciones en el <a href="https://trufflesuite.com/boxes/webpack/">tutorial de Truffle + Webpack</a>, o las instrucciones siguientes.</p>
+<p>Como ya tenemos Truffle instalado, creamos un directorio nuevo y allí desempaquetamos el ejemplo de Webpack.</p>
+<div class="highlight"><pre><span></span><code>mkdir webpack-demo
+cd webpack-demo
+truffle unbox webpack
+</code></pre></div>
+<p>Esto descargará el ejemplo y colocará en las carpetas respectivas todos los archivos.</p>
+<p>Debemos abrir cada uno de los contratos, y al inicio debemos realizar un pequeño cambio. Reemplazamos <code>&lt;0.7.0</code> por <code>&lt;=0.8.16</code> para usar la versión del compilador de Solidity que tenemos instalada.</p>
+<div class="highlight"><pre><span></span><code>pragma solidity &gt;=0.4.21 &lt;=0.8.16;
+</code></pre></div>
+<p>Para poder continuar, debemos desplegar los contratos que modificamos. Estos contratos representan MetaCoin, el cual es un tokene sencillo. Recordamos que para poder desplegar debemos colocar nuestra llave en el archivo <code>.env</code> así como realizar las configuraciones necesarias en <code>truffle-config.js</code>.</p>
+<p>También si no los instalamos de forma global, instalaremos <code>dotenv</code> y <code>hdwallet-provider</code> en la carpeta actual.</p>
+<div class="highlight"><pre><span></span><code>npm install dotenv
+npm install @truffle/hdwallet-provider
+</code></pre></div>
+<p>Después de esta instalación podemos desplegar con el siguiente comando.</p>
+<div class="highlight"><pre><span></span><code>truffle migrate --network goerli
+</code></pre></div>
+<h2 id="ejecutando-la-aplicacion-web">Ejecutando la aplicación web<a class="headerlink" href="#ejecutando-la-aplicacion-web" title="Permanent link">&para;</a></h2>
+<p>Con nuestro contrato desplegado, vamos a la carpeta <code>app</code> y desde allí iniciamos un servidor de pruebas.</p>
+<div class="highlight"><pre><span></span><code>cd app
+npm run dev
+</code></pre></div>
+<p>Podremos ver algunos mensajes en nuestra terminal que nos indican que un servidor está ejecutándose en <code>http://localhost:8000/</code> y que Webpack fue el encargado de preparar todas las librerías necesarias para su funcionamiento.</p>
+<p>Abrimos esta página en nuestro navegador y al hacerlo notaremos que se abrirá una ventana de Metamask. Tras ingresar a Metamask, se nos preguntará si queremos permitir que el sitio se conecte con nuestra billetera, aceptamos esto haciendo click en <strong>Next</strong> y luego en <strong>Connect</strong>.</p>
+<figure>
+<p><img alt="Webpack" src="../../../img/part4-webpack1.png" />
+  </p>
+<figcaption>Metamask nos pregunta si deseamos dar acceso a nuestra cuenta</figcaption>
+</figure>
+<p>Luego de esto la aplicación ejemplo está lista para usarse, solo debemos recargar la página. Tras recargar, veremos que tenemos disponible <strong>10000 META</strong>, es decir de nuestro token de prueba.</p>
+<figure>
+<p><img alt="Webpack" src="../../../img/part4-webpack1.png" />
+  </p>
+<figcaption>Aplicación web ejecutándose en nuestro navegador</figcaption>
+</figure>
+<p>Podemos usar esta interfaz para realizar transferencias del token hacia otras direcciones.</p>
+<h2 id="funcionamiento-de-webpack">Funcionamiento de Webpack<a class="headerlink" href="#funcionamiento-de-webpack" title="Permanent link">&para;</a></h2>
+<p>Cuando usamos el comando <code>npm run dev</code> se ejecuta <code>webpack-dev-server</code> el cual es el encargado de iniciar un servidor para pruebas.</p>
+<p>Webpack utiliza el archivo <code>webpack.config.js</code> para saber cuál es su punto de inicio, es decir, cuál es el script principal de nuestra aplicación web.</p>
+<p>Podemos explorar el archivo <code>index.js</code> el cual es el punto de inicio.</p>
+<h2 id="detalles-de-indexjs">Detalles de index.js<a class="headerlink" href="#detalles-de-indexjs" title="Permanent link">&para;</a></h2>
+<p>Al inicio de este archivo encontramos que se importan dos elementos, la librería Web3 y un JSON que representa el contrato que desplegamos. Si quisiseramos interactuar con múltiples contratos o usar librerías adicionales, debemos agregarlas aquí.</p>
+<div class="highlight"><pre><span></span><code>import Web3 from &quot;web3&quot;;
+import metaCoinArtifact from &quot;../../build/contracts/MetaCoin.json&quot;;
+</code></pre></div>
+<p>Luego encontramos que se crea el objeto <code>App</code> que contiene el proveedor de Web3, la cuenta que estamos usando, y una referencia al contrato.</p>
+<div class="highlight"><pre><span></span><code>const App = {
+  web3: null,
+  account: null,
+  meta: null,
+</code></pre></div>
+<p>Más abajo encontramos varias funciones asíncronas que nos permiten interactuar con el contrato (<code>start</code>, <code>refreshBalance</code>, <code>sendCoin</code>), y una que nos permite cambiar el contenido de la página (<code>setStatus</code>).</p>
+<p>Si exploramos con detenimiento estas funciones, encontraremos que usan a <code>web3</code>, <code>account</code> y <code>meta</code> para realizar tareas similares a las que realizabamos desde la consola de Truffle.</p>
+<p>Finalmente tenemos algo de código que nos permite obtener el proveedor Web3 de nuestro navegador, es decir, nos permite usar nuestras cuentas que tenemos en Metamask.</p>
+<p>En específico son las siguientes líneas las que nos permiten el acceso.</p>
+<div class="highlight"><pre><span></span><code>App.web3 = new Web3(window.ethereum);
+window.ethereum.enable();
+</code></pre></div>
+<p>En el siguiente ejercicio desplegaremos nuestro propio contrato y cambiaremos el contenido de este archivo para poder interactuar con él.</p>
+<h2 id="generando-nuestra-aplicacion-web">Generando nuestra aplicación web<a class="headerlink" href="#generando-nuestra-aplicacion-web" title="Permanent link">&para;</a></h2>
+<p>Una vez que hayamos probado localmente nuestra aplicación, podemos generarla para poder desplegarla en cualquier otro servidor. Usamos el siguiente comando para esto.</p>
+<div class="highlight"><pre><span></span><code>npm run build
+</code></pre></div>
+<p>Esto nos genera una carpeta llamada <code>dist</code> que contiene los archivos <code>index.html</code> e <code>index.js</code>. Si abrimos este <code>index.js</code> notaremos que no es el mismo que nosotros escribimos, sino es el que Webpack generó al empaquetar todas las librerías juntas.</p>
+<p>Podemos colocar estos archivos en cualquier servidor (incluso en Github Pages) y con eso podemos acceder a nuestra aplicación web e interactuar con nuestro contrato.</p>
 
               
             </article>
@@ -840,6 +1044,27 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../interaction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Leer y escribir hacia contrato" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Leer y escribir hacia contrato
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
