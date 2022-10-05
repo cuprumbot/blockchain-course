@@ -62,6 +62,4 @@ nav:
       - 'Logs como almacenamiento barato' : 'exercises/part4/log.md'
       - 'Leer y escribir hacia contrato' : 'exercises/part4/interaction.md'
       - 'Utilizando Webpack' : 'exercises/part4/webpack.md'
-
-
-#      - 'Web3 para interactuar con contrato' : 'exercises/part4/web3.md'
+      - 'Web3 para interactuar con contrato' : 'exercises/part4/web3.md'
