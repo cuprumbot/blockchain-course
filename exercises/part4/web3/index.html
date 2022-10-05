@@ -17,7 +17,7 @@
     
     
       
-        <title>Web3 - Blockchain</title>
+        <title>Web3 para interactuar con contrato - Blockchain</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#web3-para-interactuar-con-un-contrato" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Web3
+              Web3 para interactuar con contrato
             
           </span>
         </div>
@@ -690,12 +695,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -716,12 +723,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
       
       
       
@@ -794,6 +803,82 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Web3 para interactuar con contrato
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Web3 para interactuar con contrato
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#desplegando-un-contrato" class="md-nav__link">
+    Desplegando un contrato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creando-nuestro-sitio" class="md-nav__link">
+    Creando nuestro sitio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificando-indexjs-para-interactuar-con-nuestro-contrato" class="md-nav__link">
+    Modificando index.js para interactuar con nuestro contrato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probando-nuestra-aplicacion" class="md-nav__link">
+    Probando nuestra aplicación
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -824,6 +909,44 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#desplegando-un-contrato" class="md-nav__link">
+    Desplegando un contrato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creando-nuestro-sitio" class="md-nav__link">
+    Creando nuestro sitio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificando-indexjs-para-interactuar-con-nuestro-contrato" class="md-nav__link">
+    Modificando index.js para interactuar con nuestro contrato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probando-nuestra-aplicacion" class="md-nav__link">
+    Probando nuestra aplicación
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -841,9 +964,212 @@
 
 
 
-  <h1>Web3</h1>
+<h1 id="web3-para-interactuar-con-un-contrato">Web3 para interactuar con un contrato<a class="headerlink" href="#web3-para-interactuar-con-un-contrato" title="Permanent link">&para;</a></h1>
+<p>Es momento de aprovechar Webpack para interactuar con un contrato propio. Desplegaremos un contrato y modificaremos <code>index.js</code>, el archivo creado por Webpack para poder comunicarnos con nuestro contrato.</p>
+<h2 id="desplegando-un-contrato">Desplegando un contrato<a class="headerlink" href="#desplegando-un-contrato" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Caso de uso</p>
+<p>Necesitamos publicar un mensaje que no pueda ser modificado o eliminado. </p>
+<p>Desafortunadamente una publicaciíon en redes sociales o en un sitio privado no funciona para esto. Escribiremos nuestro mensaje en el blockchain para que sea realmente permanente.</p>
+<p>Escribiremos el mensaje como log para ahorrar un poco de gas.</p>
+</div>
+<p>La forma más fácil de crear un sitio para interactuar con un contrato es usando el box de Webpack que Truffle nos provee.</p>
+<div class="highlight"><pre><span></span><code>mkdir message
+cd message
+truffle unbox webpack
+</code></pre></div>
+<p>Recuerda instalar las herramientas en la nueva carpeta.</p>
+<div class="highlight"><pre><span></span><code>npm install dotenv
+npm install @truffle/hdwallet-provider
+</code></pre></div>
+<p>Recuerda también copiar tus llaves y configuración que has usado en ejercicios anteriores, copia <code>.env</code> y <code>truffle-config.js</code> hacia la carpeta actual.</p>
+<p>Al igual que en el ejercicio anterior, debemos realizar un cambio en el archivo <code>contracts/Migrations.sol</code>. Ve al contrato y cambia la versión que aparece al inicio.</p>
+<div class="highlight"><pre><span></span><code>pragma solidity &gt;=0.4.21 &lt;=0.8.16;
+</code></pre></div>
+<p>Puedes eliminar los archivos <code>contracts/MetaCoin.sol</code> y <code>contracts/ConvertLib.sol</code>. Luego crearemos el contrato <code>Message.sol</code> con el siguiente contenido. Es un contrato sencillo que nos permitirá escribir un mensaje hacia el log.</p>
+<div class="highlight"><pre><span></span><code>// SPDX-License-Identifier: MIT
+pragma solidity &gt;=0.4.21 &lt;=0.8.16;
 
+contract Message {
 
+  constructor() public { }
+
+  event LogMessage(address _sender, string _msg);
+
+  function submitMessage (string memory _msg) public {
+    emit LogMessage(msg.sender, _msg);
+  }
+}
+</code></pre></div>
+<p>Finalmente, modificaremos el archivo <code>migrations/2_deploy_contracts</code>. <code>MetaCoin</code> y <code>ConvertLib</code> ya no existen, entonces ahora nuestro archivo debe quedar de esta manera.</p>
+<div class="highlight"><pre><span></span><code>const Message = artifacts.require(&quot;Message&quot;);
+
+module.exports = function(deployer) {
+  deployer.deploy(Message);
+};
+</code></pre></div>
+<p>¡Listo! Estamos preparados para desplegar como lo hemos realizado ya un par de veces.</p>
+<div class="highlight"><pre><span></span><code>truffle migrate --network goerli
+</code></pre></div>
+<p>Una vez desplegado nuestro contrato, podríamos probarlo manualmente desde la consola de Truffle.</p>
+<div class="highlight"><pre><span></span><code>let instance = Message.deployed()
+let result = instance.submitMessage(&quot;Hola mundo!&quot;, {from: accounts[0]})
+</code></pre></div>
+<p>Después busca tu transacción en Etherscan, y en la pestaña de Logs podrás ver la siguiente información. El valor en hexadecimal corresponde a la dirección que realizó la transacción, y el número en decimal corresponde a la longitud del mensaje.</p>
+<figure>
+<p><img alt="Web3" src="../../../img/part4-web1.png" />
+  </p>
+<figcaption>Dirección, longitud y mensaje en el Etherscan</figcaption>
+</figure>
+<h2 id="creando-nuestro-sitio">Creando nuestro sitio<a class="headerlink" href="#creando-nuestro-sitio" title="Permanent link">&para;</a></h2>
+<p>Modificaremos el sitio que el box de Webpack creó. Ve al archivo <code>app/src/index.html</code> y reemplaza el contenido por lo siguiente.</p>
+<div class="highlight"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Submit a message!&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1&gt;Submit a message!&lt;/h1&gt;
+
+    &lt;label for=&quot;message&quot;&gt;Message:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;message&quot; placeholder=&quot;Say something!&quot; /&gt;
+
+    &lt;button onclick=&quot;App.submitMessage()&quot;&gt;Submit!&lt;/button&gt;
+
+    &lt;p id=&quot;status&quot;&gt;&lt;/p&gt;
+
+    &lt;script src=&quot;index.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<figure>
+<p><img alt="Web3" src="../../../img/part4-web2.png" />
+  </p>
+<figcaption>Interfaz que pronto interactuará con nuestro contrato</figcaption>
+</figure>
+<h2 id="modificando-indexjs-para-interactuar-con-nuestro-contrato">Modificando index.js para interactuar con nuestro contrato<a class="headerlink" href="#modificando-indexjs-para-interactuar-con-nuestro-contrato" title="Permanent link">&para;</a></h2>
+<p>Vamos a modificar <code>app/src/index.js</code>. Este archivo es sumamente importante, pues además de incluir nuestro código le indica a Webpack que otros archivos debe empaquetar al momento de generar nuestra aplicación.</p>
+<p>Para comenzar, ahora importaremos <code>Message.json</code> en lugar de <code>MetaCoin.json</code>. Al inicio del archivo, cambia para colocar lo siguiente.</p>
+<div class="highlight"><pre><span></span><code>import messageArtifact from &quot;../../build/contracts/Message.json&quot;;
+</code></pre></div>
+<p>Después debemos sustituir las referencias a <code>metacoinArtifact</code> por <code>messageArtifact</code>. Dentro de la función <code>start</code> busca la variable <code>deployedNetwork</code> y realiza las siguientes modificaciones.</p>
+<div class="highlight"><pre><span></span><code>const deployedNetwork = messageArtifact.networks[networkId];
+this.meta = new web3.eth.Contract(
+    messageArtifact.abi,
+    deployedNetwork.address,
+);
+</code></pre></div>
+<p>Más abajo, todavía dentro de <code>start</code> elimina <code>this.refreshBalance();</code> pues también eliminaremos esa función.</p>
+<p>Elimina por completo las funciones <code>refreshBalance</code> y <code>sendCoin</code> pues estas eran específicas para <code>Metacoin</code>. Nosotros crearemos la siguiente función que interactua con nuestro contrato <code>Message</code>.</p>
+<div class="highlight"><pre><span></span><code>submitMessage: async function () {
+    const message = document.getElementById(&quot;message&quot;).value;
+
+    this.setStatus(&quot;Submiting message...&quot;);
+
+    // La llamada se realiza de forma ligeramente distinta
+    // a como la realizamos desde la consola de Truffle
+    const { submitMessage } = this.meta.methods;
+    await submitMessage(message).send({ from: this.account });
+
+    this.setStatus(&quot;Success!&quot;);
+},
+</code></pre></div>
+<p>Asegurate de colocar una coma al final para separarlo de <code>setStatus</code>. <code>setStatus</code> no sufre ningún cambio</p>
+<p>Al completar estos cambios, <code>index.js</code> se verá de esta manera.</p>
+<div class="highlight"><pre><span></span><code>import Web3 from &quot;web3&quot;;
+import messageArtifact from &quot;../../build/contracts/Message.json&quot;;
+
+const App = {
+  web3: null,
+  account: null,
+  meta: null,
+
+  start: async function() {
+    const { web3 } = this;
+
+    try {
+      // get contract instance
+      const networkId = await web3.eth.net.getId();
+      const deployedNetwork = messageArtifact.networks[networkId];
+      this.meta = new web3.eth.Contract(
+        messageArtifact.abi,
+        deployedNetwork.address,
+      );
+
+      // get accounts
+      const accounts = await web3.eth.getAccounts();
+      this.account = accounts[0];
+
+    } catch (error) {
+      console.error(&quot;Could not connect to contract or chain.&quot;);
+    }
+  },
+
+  submitMessage: async function () {
+    const message = document.getElementById(&quot;message&quot;).value;
+
+    this.setStatus(&quot;Submiting message...&quot;);
+
+    const { submitMessage } = this.meta.methods;
+    await submitMessage(message).send({ from: this.account });
+
+    this.setStatus(&quot;Success!&quot;);
+  },
+
+  setStatus: function(message) {
+    const status = document.getElementById(&quot;status&quot;);
+    status.innerHTML = message;
+  },
+};
+
+window.App = App;
+
+window.addEventListener(&quot;load&quot;, function() {
+  if (window.ethereum) {
+    // use MetaMask&#39;s provider
+    App.web3 = new Web3(window.ethereum);
+    window.ethereum.enable(); // get permission to access accounts
+  } else {
+    console.warn(
+      &quot;No web3 detected. Falling back to http://127.0.0.1:8545. You should remove this fallback when you deploy live&quot;,
+    );
+    // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+    App.web3 = new Web3(
+      new Web3.providers.HttpProvider(&quot;http://127.0.0.1:8545&quot;),
+    );
+  }
+
+  App.start();
+});
+</code></pre></div>
+<h2 id="probando-nuestra-aplicacion">Probando nuestra aplicación<a class="headerlink" href="#probando-nuestra-aplicacion" title="Permanent link">&para;</a></h2>
+<p>Iniciamos el servidor de pruebas ejecutando el siguiente comando desde la carpeta <code>app</code>.</p>
+<div class="highlight"><pre><span></span><code>npm run dev
+</code></pre></div>
+<p>Al visitar el sitio desde nuestro navegador, Metamask nos preguntará si deseamos conectarnos. Después de conectarnos exitosamente, por lo general se necesita refrescar la página para que funcione correctamente.</p>
+<p>Tras recargar, podemos escribir un mensaje y presionar el botón para enviarlo. Abajo aparecerá un mensaje y se abrirá una ventana de Metamask para que autoricemos la transacción.</p>
+<figure>
+<p><img alt="Web3" src="../../../img/part4-web3.png" />
+  </p>
+<figcaption>Metamask nos pide autorización para realizar la transacción</figcaption>
+</figure>
+<figure>
+<p><img alt="Web3" src="../../../img/part4-web4.png" />
+  </p>
+<figcaption>Nuestra transacción está siendo procesada</figcaption>
+</figure>
+<p>Esperamos algunos segundos y después Metamask nos indicará que la transacción fue exitosa, podemos hacer click en ese mensaje para verla en Etherscan. Cuando esto suceda, el mensaje en la página cambiará.</p>
+<figure>
+<p><img alt="Web3" src="../../../img/part4-web5.png" />
+  </p>
+<figcaption>Notificación de Metamask indicando una transacción exitosa</figcaption>
+</figure>
+<figure>
+<p><img alt="Web3" src="../../../img/part4-web6.png" />
+  </p>
+<figcaption>Mensaje en nuestra interfaz indicando que la transacción se completó</figcaption>
+</figure>
 
               
             </article>
@@ -854,6 +1180,27 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../webpack/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Utilizando Webpack" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Utilizando Webpack
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
